@@ -11,10 +11,8 @@
 ____________________________________________________________________________________________________________
 
 ### Individual Setup
-https://www.youtube.com/watch?v=rGGzqx9CRgA&ab_channel=MyLife | ref project
-
-https://www.youtube.com/watch?v=eWSpJWRqxkw&ab_channel=TechDecodeTutorials | Running C in vscode
-
+https://www.youtube.com/watch?v=rGGzqx9CRgA&ab_channel=MyLife | ref project<br>
+https://www.youtube.com/watch?v=eWSpJWRqxkw&ab_channel=TechDecodeTutorials | Running C in vscode <br>
 https://www.youtube.com/watch?v=QrKpqdBiFRI&ab_channel=CodeVault | serialization in c (read/write object)
  
  
