@@ -14,7 +14,8 @@ ________________________________________________________________________________
 https://www.youtube.com/watch?v=rGGzqx9CRgA&ab_channel=MyLife | ref project<br>
 https://www.youtube.com/watch?v=eWSpJWRqxkw&ab_channel=TechDecodeTutorials | Running C in vscode <br>
 https://www.youtube.com/watch?v=QrKpqdBiFRI&ab_channel=CodeVault | serialization in c (read/write object) <br>
-https://www.youtube.com/watch?v=shYMgRcjm5A&ab_channel=CodeVault | w/r array of struct
+https://www.youtube.com/watch?v=shYMgRcjm5A&ab_channel=CodeVault | w/r array of struct <br>
+https://www.youtube.com/watch?v=0SkdAoVzWpk&ab_channel=PortfolioCourses | w/r เช่นเดิม
  
  
 
