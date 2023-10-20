@@ -20,8 +20,7 @@ int main(){
     strcpy(note[1].description, "This is one of my best reckless moment in Point Blank");
     note[1].happiness = 2;
 
-
-    if (write_data("note.bin", note, 2))
+        if (write_data("note.bin", note, 2))
             printf("Write data OK.\n");
     else {
         printf("Error writing to file.\n");
@@ -29,10 +28,11 @@ int main(){
     }
     free(note);
 
-    // Diary *file_data;
-    // file_data = read_data("note.bin", &total);
-    // free(file_data);
-    // printf("%s\n", file_data[1].description);
+    Diary *file_data;
+    file_data = read_data("note.bin", &total);
+    free(file_data);
+    printf("%s\n", file_data[1].description);
+    printDiaries(file_data, total);
     int option;
 
     /* instruction : 
