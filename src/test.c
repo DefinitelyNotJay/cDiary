@@ -67,10 +67,6 @@ int main(){
         return 1;
     }
     free(file_data);
-    // int x,y,z;
-    // scanf("%d", &x);
-    // scanf("%d", &y);
-    // scanf("%d", &z);
 
     printDiaries(file_data, total);
     return 0;
