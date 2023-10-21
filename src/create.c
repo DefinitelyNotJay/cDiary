@@ -5,7 +5,10 @@
 #include "diary.h"
 #include "fileHandler.h"
 #include <time.h>
+
 bool dateInputHanlder(int date, int month, int year);
+bool happinessInputHandler(int value);
+
 int create(Diary *file_data){
     time_t t;
     struct tm *tm_info;
@@ -29,7 +32,13 @@ int create(Diary *file_data){
     printf("Content is : %s\n", content);
     printf("Rate your happiness today! : ");
     scanf("%d", &happiness_rate);
-    int index = (year-2023)*365 + (month-1)*31 + date-1;
+    while(!happinessInputHandler(happiness_rate)){
+        printf("Please try again\nHappiness rate should be 1-10 : ");
+        scanf("%d", &happiness_rate);
+    }
+
+    int index = (year-2023)*31 + (month-1)*31 + date-1;
+    printf("%d\n", index);
 
     file_data[index].day = date;
     file_data[index].month = month;
@@ -43,7 +52,7 @@ int create(Diary *file_data){
         // return 1;
     }
     system("pause");
-    printDiaries(file_data, 4);
+    printDiary(file_data, index);
     return 0;
 }
 
@@ -53,14 +62,13 @@ bool dateInputHanlder(int date, int month, int year){
     }
     bool con1 = date > 0 && date <= 31;
     bool con2 = month > 0 && month <= 12;
-    bool con3 = year >= 2023 && year <= 2025;
-    
-    if(con1&&con2&&con3){
-        printf("All true\n");
-        return true;
-    }else{
-        printf("false\n");
-        return false;
-    };
+    bool con3 = year >= 2023 && year <= 2028;
+    bool con4 = &date != NULL && &month != NULL && &year != NULL;
+    if(con1&&con2&&con3&&con4)return true;
   return false;
 };
+
+bool happinessInputHandler(int value){
+    if(&value == NULL || value < 1 || value > 10) return false;
+    return true;
+}

@@ -57,5 +57,17 @@ void printDiaries(struct Diary *note, int total){
     }
 }
 
+void printDiary(struct Diary *note, int index){
+        printf("*-*-*-Diary-*-*-*\n");
+        printf("Date: %02d/%02d/%04d\n", note[index].day, note[index].month, note[index].year);
+        printf("Text: %s\n", note[index].description);
+        printf("Happiness: %d", note[index].happiness);
+        printf("\n\n\n");
+}
+
+int getIndexFromDate(int day, int month, int year){
+    return (year-2023)*365 + (month-1)*31 + day;
+}
+
 
 
