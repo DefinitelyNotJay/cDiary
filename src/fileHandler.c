@@ -50,11 +50,24 @@ void printDiaries(struct Diary *note, int total){
     printf("\nData read OK.\n\n");
     for (int i = 0; i<total; i++){
         printf("Diary %d\n", i+1);
-        printf("Date: %s\n", note[i].date);
-        printf("Type: %d\n", note[i].type);
+        printf("Date: %02d/%02d/%04d\n", note[i].day, note[i].month, note[i].year);
         printf("Text: %s\n", note[i].description);
         printf("Happiness: %d", note[i].happiness);
         printf("\n\n\n");
     }
 }
+
+void printDiary(struct Diary *note, int index){
+        printf("*-*-*-Diary-*-*-*\n");
+        printf("Date: %02d/%02d/%04d\n", note[index].day, note[index].month, note[index].year);
+        printf("Text: %s\n", note[index].description);
+        printf("Happiness: %d", note[index].happiness);
+        printf("\n\n\n");
+}
+
+int getIndexFromDate(int day, int month, int year){
+    return (year-2023)*365 + (month-1)*31 + day;
+}
+
+
 
