@@ -50,11 +50,12 @@ void printDiaries(struct Diary *note, int total){
     printf("\nData read OK.\n\n");
     for (int i = 0; i<total; i++){
         printf("Diary %d\n", i+1);
-        printf("Date: %s\n", note[i].date);
-        printf("Type: %d\n", note[i].type);
+        printf("Date: %02d/%02d/%04d\n", note[i].day, note[i].month, note[i].year);
         printf("Text: %s\n", note[i].description);
         printf("Happiness: %d", note[i].happiness);
         printf("\n\n\n");
     }
 }
+
+
 
