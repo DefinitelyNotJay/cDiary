@@ -14,18 +14,30 @@ int create(Diary *file_data){
     struct tm *tm_info;
     int year, month, date, happiness_rate;
     char content[1000];
+    char userWriteToday[1];
+    int total = 365*5;
     time(&t);
     tm_info = localtime(&t);
 
     printf("create from create.c\n");
     printf("*** Write ***\n");
     //  printf("Today's date: %02d/%02d/%04d\n", tm_info->tm_mday, tm_info->tm_mon + 1, tm_info->tm_year + 1900);
-    printf("Today's Date (dd/mm/yyyy) : ");
-    scanf("%d/%d/%d", &date, &month, &year);
-    while(!dateInputHanlder(date, month, year)){
-        printf("Wrong datetime please try again : ");
+    printf("Write today content? (y/n) : ");
+    getchar();
+    gets(userWriteToday);
+    if(strcmp(userWriteToday, "y") == 0){
+        date = tm_info->tm_mday;
+        month = tm_info->tm_mon + 1;
+        year = tm_info->tm_year + 1900;
+    } else{
+        printf("Today's Date (dd/mm/yyyy) : ");
         scanf("%d/%d/%d", &date, &month, &year);
+        while(!dateInputHanlder(date, month, year)){
+            printf("Wrong datetime please try again : ");
+            scanf("%d/%d/%d", &date, &month, &year);
+        }
     }
+   
     printf("Today's content : ");
     getchar();
     gets(content);
@@ -45,11 +57,12 @@ int create(Diary *file_data){
     file_data[index].year = year;
     strcpy(file_data[index].description, content);
     file_data[index].happiness = happiness_rate;
-    if (write_data("note.bin", file_data, 4))
+
+    if (write_data("note.bin", file_data, total))
             printf("Write data OK.\n");
     else {
         printf("Error writing to file.\n");
-        // return 1;
+        return 1;
     }
     system("pause");
     printDiary(file_data, index);
