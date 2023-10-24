@@ -5,6 +5,7 @@
 #include "diary.h"
 #include "fileHandler.h"
 #include <time.h>
+#include <windows.h>
 
 bool dateInputHanlder(int date, int month, int year);
 bool happinessInputHandler(int value);
@@ -19,7 +20,8 @@ int create(Diary *file_data){
     time(&t);
     tm_info = localtime(&t);
 
-    printf("create from create.c\n");
+    system("cls");
+
     printf("*** Write ***\n");
     //  printf("Today's date: %02d/%02d/%04d\n", tm_info->tm_mday, tm_info->tm_mon + 1, tm_info->tm_year + 1900);
     printf("Write today content? (y/n) : ");
@@ -38,10 +40,10 @@ int create(Diary *file_data){
         }
     }
    
+    system("cls");
     printf("Today's content : ");
-    getchar();
     gets(content);
-    printf("Content is : %s\n", content);
+    printf("content : %s\n", content);
     printf("Rate your happiness today! : ");
     scanf("%d", &happiness_rate);
     while(!happinessInputHandler(happiness_rate)){
@@ -49,7 +51,7 @@ int create(Diary *file_data){
         scanf("%d", &happiness_rate);
     }
 
-    int index = (year-2023)*31 + (month-1)*31 + date-1;
+    int index = getIndexFromDate(date, month, year);
     printf("%d\n", index);
 
     file_data[index].day = date;
