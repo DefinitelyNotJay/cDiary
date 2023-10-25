@@ -19,7 +19,7 @@ https://www.youtube.com/watch?v=shYMgRcjm5A&ab_channel=CodeVault | W/R array of 
 https://www.youtube.com/watch?v=0SkdAoVzWpk&ab_channel=PortfolioCourses | W/R .bin file
 
 # ASCII art
-https://docs.google.com/document/u/1/d/1f0jAZXi0sk6RSfwoY4FTZvj4r5QR3YMGrQ3TnHzhcPg/edit?fbclid=IwAR3cJAeKWzm8XxyNAYa7Ezail7NNeRdXPLBmjx7W4rfK3W3jvpMGXLhnEkc | 
+https://docs.google.com/document/u/1/d/1f0jAZXi0sk6RSfwoY4FTZvj4r5QR3YMGrQ3TnHzhcPg/edit?fbclid=IwAR3cJAeKWzm8XxyNAYa7Ezail7NNeRdXPLBmjx7W4rfK3W3jvpMGXLhnEkc | ASCII Page
 https://gist.github.com/jamiew/40c66061b666272462c17f65addb14d5 | divider ASCII art
 
  
