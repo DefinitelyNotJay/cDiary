@@ -8,5 +8,5 @@ void printDiary(struct Diary *note, int index);
 Diary *read_data(char *filename, int *total);
 int getIndexFromDate(int day, int month, int year);
 int getTotalYear();
-void delay(int);
+void delay(float);
 void loading();

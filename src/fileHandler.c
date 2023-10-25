@@ -66,7 +66,7 @@ void printDiary(struct Diary *note, int index){
         printf("Date: %02d/%02d/%04d %02d:%02d\n", note[index].day, note[index].month, note[index].year, note[index].hour, note[index].minute);
         printf("Text: %s\n", note[index].description);
         printf("Happiness: %d", note[index].happiness);
-        printf("\n\n");
+        printf("\n");
 }
 
 int getIndexFromDate(int day, int month, int year){
@@ -77,7 +77,7 @@ int getTotalYear(){
     return total_year;
 }
 
-void delay(int number_of_seconds)
+void delay(float number_of_seconds)
 {
     // Converting time into milli_seconds
     int milli_seconds = 1000 * number_of_seconds;

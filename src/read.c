@@ -19,7 +19,7 @@ int read(Diary *allDiaries){
     int isReadManyPages;
 
     system("cls");
-    printf("     ______ ______\n");
+    printf("      ______ ______\n");
     printf("    _/      Y      \\_\n");
     printf("   // ~~ ~~ | ~~ ~  \\\\\n");
     printf("  // ~ ~ ~~ | ~~~ ~~ \\\\\n");
@@ -29,7 +29,7 @@ int read(Diary *allDiaries){
     while(continueReading){
     
     printf("\n\n");
-    printf("Which diary you wanna see?\nInput your date here (DD/MM/YY) : ");
+    printf("Which diary you wanna see?\nInput your date here (DD/MM/YYYY) : ");
     scanf("%d/%d/%d", &day, &month, &year);
 
     int index = getIndexFromDate(day, month, year);
@@ -57,7 +57,7 @@ int read(Diary *allDiaries){
 
     if(continueReadingInput == 'n'){
         continueReading = false;
-        printf("-------------------");
+        printf("\n");
     }
 
     }
