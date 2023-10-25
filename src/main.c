@@ -9,6 +9,7 @@
 int create(Diary *file_data);
 int edit(Diary *file_data);
 int read(Diary *allDiaries);
+int exitPage(void);
 
 int main(){
     Diary *note;
@@ -57,6 +58,7 @@ int main(){
             read(file_data);
             break;
         case 4:
+            exitPage();
             exit(0);
             free(file_data);
             break;
