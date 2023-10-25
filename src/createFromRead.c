@@ -8,41 +8,14 @@
 #include <time.h>
 #include <windows.h>
 
-int create(Diary *file_data)
-{
-    time_t t;
-    struct tm *tm_info;
-    int year, month, date, happiness_rate;
-    char content[1000];
-    char userWriteToday[1];
-    time(&t);
-    tm_info = localtime(&t);
-
+int createFromRead(Diary *file_data, int day, int month, int year){
     system("cls");
 
     printf("*** Write ***\n");
-    printf("Write today content? (y/n) : ");
-    getchar();
-    gets(userWriteToday);
 
-    if (strcmp(userWriteToday, "y") == 0)
-    {
-        date = tm_info->tm_mday;
-        month = tm_info->tm_mon + 1;
-        year = tm_info->tm_year + 1900;
-    }
-    else
-    {
-        printf("Today's Date (dd/mm/yyyy) : ");
-        scanf("%d/%d/%d", &date, &month, &year);
-        while (!dateInputHanlder(date, month, year))
-        {
-            printf("Wrong datetime please try again : ");
-            scanf("%d/%d/%d", &date, &month, &year);
-        }
-    }
-
-    int index = getIndexFromDate(date, month, year);
+    char content[1000];
+    int index = getIndexFromDate(day, month, year);
+    int happiness_rate;
 
     system("cls");
     printf("Today's content : ");
@@ -57,7 +30,7 @@ int create(Diary *file_data)
     }
 
 
-    file_data[index].day = date;
+    file_data[index].day = day;
     file_data[index].month = month;
     file_data[index].year = year;
     strcpy(file_data[index].description, content);
@@ -71,9 +44,5 @@ int create(Diary *file_data)
         return 1;
     }
     system("pause");
-
-
     return 0;
 }
-
-

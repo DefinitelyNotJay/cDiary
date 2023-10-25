@@ -3,6 +3,9 @@
 #include <stdlib.h>
 #include "diary.h"
 
+int total_year = 365 * 5;
+
+
 Diary *read_data(char *filename, int *total){
     FILE* file;
 
@@ -68,6 +71,12 @@ void printDiary(struct Diary *note, int index){
 int getIndexFromDate(int day, int month, int year){
     return (year-2023)*365 + (month-1)*31 + day-1;
 }
+
+int getTotalYear(){
+    return total_year;
+}
+
+
 
 
 
