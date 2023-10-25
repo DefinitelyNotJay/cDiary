@@ -3,6 +3,9 @@
 #include <stdlib.h>
 #include "diary.h"
 
+int total_year = 365 * 5;
+
+
 Diary *read_data(char *filename, int *total){
     FILE* file;
 
@@ -58,7 +61,7 @@ void printDiaries(struct Diary *note, int total){
 }
     
 void printDiary(struct Diary *note, int index){
-        printf("*-*-*-Diary-*-*-*\n");
+        printf("Diary No.%d\n", index+1);
         printf("Date: %02d/%02d/%04d\n", note[index].day, note[index].month, note[index].year);
         printf("Text: %s\n", note[index].description);
         printf("Happiness: %d", note[index].happiness);
@@ -66,8 +69,13 @@ void printDiary(struct Diary *note, int index){
 }
 
 int getIndexFromDate(int day, int month, int year){
-    return (year-2023)*365 + (month-1)*31 + day;
+    return (year-2023)*365 + (month-1)*31 + day-1;
 }
+
+int getTotalYear(){
+    return total_year;
+}
+
 
 
 

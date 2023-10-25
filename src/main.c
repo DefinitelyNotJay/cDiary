@@ -4,9 +4,11 @@
 #include <string.h>
 #include "diary.h"
 #include "fileHandler.h"
+#include <Windows.h>
 
 int create(Diary *file_data);
 int edit(Diary *file_data);
+int read(Diary *allDiaries);
 
 int main(){
     Diary *note;
@@ -30,10 +32,7 @@ int main(){
     // }
     // free(note);
 
-    Diary *file_data;
-    file_data = read_data("note.bin", &total);
-    printf("%s\n", file_data[0].description);
-    printDiary(file_data, 0);
+
     int option;
 
     /* instruction : 
@@ -45,12 +44,18 @@ int main(){
     */
    printf("*** Main Menu ***\n");
     while(option != 4){
+        Diary *file_data;
+        file_data = read_data("note.bin", &total);
+        system("cls");
         printf("1 : Write\n2 : Edit\n3 : Read\n4 : Exit\nSelect An Option : ");
    scanf("%d", &option);
         switch (option){
         case 1:
             create(file_data);
             system("pause");
+            break;
+        case 3:
+            read(file_data);
             break;
         case 4:
             exit(0);
