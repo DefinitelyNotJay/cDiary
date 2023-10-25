@@ -46,8 +46,7 @@ int main(){
     while(option != 4){
         Diary *file_data;
         file_data = read_data("note.bin", &total);
-        printf("read!\n");
-        // system("cls");
+        system("cls");
         printf("1 : Write\n2 : Edit\n3 : Read\n4 : Exit\nSelect An Option : ");
    scanf("%d", &option);
         switch (option){
