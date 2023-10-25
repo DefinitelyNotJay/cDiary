@@ -63,7 +63,7 @@ void printDiaries(struct Diary *note, int total){
     
 void printDiary(struct Diary *note, int index){
         printf("Diary No.%d\n", index+1);
-        printf("Date: %02d/%02d/%04d\n", note[index].day, note[index].month, note[index].year);
+        printf("Date: %02d/%02d/%04d %02d:%02d\n", note[index].day, note[index].month, note[index].year, note[index].hour, note[index].minute);
         printf("Text: %s\n", note[index].description);
         printf("Happiness: %d", note[index].happiness);
         printf("\n\n");
@@ -89,4 +89,11 @@ void delay(int number_of_seconds)
     while (clock() < start_time + milli_seconds);
 }
 
-
+void loading(){
+    int progress = 1;
+    for(int i = 0; i < 30; ++i){
+        for(int j = 0; j < i; ++j){
+            
+        }
+    }
+}

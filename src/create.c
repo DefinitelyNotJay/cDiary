@@ -12,7 +12,7 @@ int create(Diary *file_data)
 {
     time_t t;
     struct tm *tm_info;
-    int year, month, date, happiness_rate;
+    int year, month, date, hour, min, happiness_rate;
     char content[1000];
     char userWriteToday[1];
     time(&t);
@@ -64,6 +64,8 @@ int create(Diary *file_data)
     file_data[index].year = year;
     strcpy(file_data[index].description, content);
     file_data[index].happiness = happiness_rate;
+    file_data[index].hour = tm_info->tm_hour;
+    file_data[index].minute = tm_info->tm_min;
 
     printf("\n");
 
