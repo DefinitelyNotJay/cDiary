@@ -10,7 +10,7 @@
 int edit(Diary *file_data){
 
     int day, month, year;
-    char userInput;
+    char* userInput;
 
     printf("*** Edit ***\n\n");
     // insert cool ASCII pic

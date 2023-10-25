@@ -52,7 +52,6 @@ int main(){
         switch (option){
         case 1:
             create(file_data);
-            system("pause");
             break;
         case 3:
             read(file_data);

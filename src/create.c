@@ -25,7 +25,7 @@ int create(Diary *file_data)
     getchar();
     gets(userWriteToday);
 
-    if (strcmp(userWriteToday, "y") == 0)
+    if ((strcmp(userWriteToday, "y") == 0) || (strcmp(userWriteToday,"Y") == 0))
     {
         date = tm_info->tm_mday;
         month = tm_info->tm_mon + 1;
@@ -49,22 +49,23 @@ int create(Diary *file_data)
     getchar();
     gets(content);
     system("cls");
-    printf("Rate your happiness today! : ");
-    printf("Content is : %s\n", content);
-    printf("Rate your happiness today? : ");
+    printf("Happiness rate must be 1-10\n");
+    printf("Rate your happiness today ?: ");
     scanf("%d", &happiness_rate);
-    while (!happinessInputHandler(happiness_rate))
+    while ((happiness_rate > 10) || (happiness_rate < 1))
     {
-        printf("Please try again\nHappiness rate should be 1-10 : ");
+        printf("\n");
+        printf("Please try again\nHappiness rate must be 1-10: ");
         scanf("%d", &happiness_rate);
     }
-
 
     file_data[index].day = date;
     file_data[index].month = month;
     file_data[index].year = year;
     strcpy(file_data[index].description, content);
     file_data[index].happiness = happiness_rate;
+
+    printf("\n");
 
     if (write_data("note.bin", file_data, getTotalYear()))
         printf("Write data OK.\n");
