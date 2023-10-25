@@ -89,4 +89,11 @@ void delay(int number_of_seconds)
     while (clock() < start_time + milli_seconds);
 }
 
-
+void loading(){
+    int progress = 1;
+    for(int i = 0; i < 30; ++i){
+        for(int j = 0; j < i; ++j){
+            
+        }
+    }
+}
