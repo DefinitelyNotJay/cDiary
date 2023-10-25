@@ -43,6 +43,8 @@ int create(Diary *file_data){
     gets(content);
     printf("Content is : %s\n", content);
     printf("Rate your happiness today! : ");
+    printf("Content is : %s\n", content);
+    printf("Rate your happiness today? : ");
     scanf("%d", &happiness_rate);
     while(!happinessInputHandler(happiness_rate)){
         printf("Please try again\nHappiness rate should be 1-10 : ");
