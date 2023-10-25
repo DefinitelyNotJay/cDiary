@@ -22,12 +22,11 @@ int createFromRead(Diary *file_data, int day, int month, int year){
     printf("Content : ");
     getchar();
     gets(content);
-    system("cls");
-    printf("Rate your happiness today! : ");
+    printf("Happiness rate must be 1-10\nRate your happiness today? : ");
     scanf("%d", &happiness_rate);
     while (!happinessInputHandler(happiness_rate))
     {
-        printf("Please try again\nHappiness rate should be 1-10 : ");
+        printf("Please try again\nHappiness rate must be 1-10 : ");
         scanf("%d", &happiness_rate);
     }
 

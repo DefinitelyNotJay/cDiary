@@ -54,6 +54,9 @@ int main(){
         case 1:
             create(file_data);
             break;
+        case 2:
+            edit(file_data);
+            break;
         case 3:
             read(file_data);
             break;
