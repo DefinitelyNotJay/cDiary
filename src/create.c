@@ -46,6 +46,7 @@ int create(Diary *file_data)
 
     system("cls");
     printf("Today's content : ");
+    getchar();
     gets(content);
     system("cls");
     printf("Rate your happiness today! : ");

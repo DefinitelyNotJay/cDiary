@@ -18,7 +18,9 @@ int createFromRead(Diary *file_data, int day, int month, int year){
     int happiness_rate;
 
     system("cls");
-    printf("Today's content : ");
+    printf("%02d/%02d/%d\n", day, month, year);
+    printf("Content : ");
+    getchar();
     gets(content);
     system("cls");
     printf("Rate your happiness today! : ");
@@ -28,7 +30,6 @@ int createFromRead(Diary *file_data, int day, int month, int year){
         printf("Please try again\nHappiness rate should be 1-10 : ");
         scanf("%d", &happiness_rate);
     }
-
 
     file_data[index].day = day;
     file_data[index].month = month;
@@ -43,6 +44,7 @@ int createFromRead(Diary *file_data, int day, int month, int year){
         printf("Error writing to file.\n");
         return 1;
     }
+
     system("pause");
     return 0;
 }
