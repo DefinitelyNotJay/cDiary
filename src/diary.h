@@ -3,9 +3,7 @@
 
 typedef struct Diary
 {
-    int day;
-    int month;
-    int year;
+    int day, month, year, hour, minute;
     char description[1000];
     int happiness;
 } Diary;

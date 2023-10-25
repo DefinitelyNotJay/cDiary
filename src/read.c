@@ -15,6 +15,8 @@ int read(Diary *allDiaries){
     bool continueReading = true;
     int continueReadingInput;
     int createFromNull;
+    bool readManyPages = true;
+    int isReadManyPages;
 
     system("cls");
     printf("      ______ ______\n");
@@ -25,7 +27,7 @@ int read(Diary *allDiaries){
     printf("`----------`-'----------'\n");
 
     while(continueReading){
-
+    
     printf("\n\n");
     printf("Which diary you wanna see?\nInput your date here (DD/MM/YYYY) : ");
     scanf("%d/%d/%d", &day, &month, &year);

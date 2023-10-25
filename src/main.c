@@ -18,11 +18,13 @@ int main(){
 
     // for(int i = 0; i < total; ++i){
     //     printf("%d\n", i);
-    //     note[i].day = 0;
-    //     note[i].month = 0;
-    //     note[i].year = 0;
-    //     strcpy(note[i].description, "");
-    //     note[i].happiness = 0;
+        // note[i].day = 0;
+        // note[i].month = 0;
+        // note[i].year = 0;
+        // note[i].hour = 0;
+        // note[i].minute = 0;
+        // strcpy(note[i].description, "");
+        // note[i].happiness = 0;
     // }
 
     //  if (write_data("note.bin", note, total))
@@ -43,6 +45,7 @@ int main(){
         4 delete
         5 exit
     */
+
    printf("*** Main Menu ***\n");
     while(option != 4){
         Diary *file_data;
