@@ -22,6 +22,16 @@ int edit(Diary *file_data){
     while(continueEditing){
         system("cls");
         printf("*** Edit ***\n\n");
+        printf("(\\ \n");
+        printf("\\'\\ \n");
+        printf(" \\'\\     __________  \n");
+        printf(" / '|   ()_________) \n");
+        printf(" \\ '/    \\ ~~~~~~~~ \\ \n");
+        printf("   \\       \\ ~~~~~~   \\ \n");
+        printf("   ==).      \\__________\\ \n");
+        printf("  (__)       ()__________) \n");
+        printf("\n\n");
+
         printf("What date you want to edit? (DD/MM/YYYY) : ");
 
         scanf("%d/%d/%d", &day, &month, &year);

@@ -8,6 +8,7 @@
 #include <time.h>
 #include <windows.h>
 
+
 int createFromRead(Diary *file_data, int day, int month, int year){
     system("cls");
 
@@ -16,6 +17,10 @@ int createFromRead(Diary *file_data, int day, int month, int year){
     char content[1000];
     int index = getIndexFromDate(day, month, year);
     int happiness_rate;
+    time_t t;
+    struct tm *tm_info;
+    time(&t);
+    tm_info = localtime(&t);
 
     system("cls");
     printf("%02d/%02d/%d\n", day, month, year);
@@ -35,6 +40,8 @@ int createFromRead(Diary *file_data, int day, int month, int year){
     file_data[index].year = year;
     strcpy(file_data[index].description, content);
     file_data[index].happiness = happiness_rate;
+    file_data[index].hour = tm_info->tm_hour;
+    file_data[index].minute = tm_info->tm_min;
 
     if (write_data("note.bin", file_data, getTotalYear()))
         printf("Write data OK.\n");

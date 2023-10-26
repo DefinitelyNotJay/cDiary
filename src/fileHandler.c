@@ -3,28 +3,32 @@
 #include <stdlib.h>
 #include "diary.h"
 #include <time.h>
+#include <string.h>
 
 int total_year = 365 * 5;
 
+Diary *read_data(char *filename, int *total)
+{
+    FILE *file;
 
-Diary *read_data(char *filename, int *total){
-    FILE* file;
+    file = fopen(filename, "rb"); // read from binary file
 
-    file = fopen(filename, "rb"); //read from binary file
-
-    if(file == NULL) return NULL;
+    if (file == NULL)
+        return NULL;
 
     if (fread(total, sizeof(int), 1, file) != 1)
-    return NULL;
+        return NULL;
 
     Diary *data = malloc(sizeof(Diary) * *total);
 
-    if (fread(data, sizeof(Diary), *total, file) != *total){
+    if (fread(data, sizeof(Diary), *total, file) != *total)
+    {
         free(data);
         return NULL;
     }
 
-    if (fclose(file) == EOF){
+    if (fclose(file) == EOF)
+    {
         free(data);
         return NULL;
     }
@@ -32,68 +36,95 @@ Diary *read_data(char *filename, int *total){
     return data;
 }
 
-bool write_data(char *filename, Diary *data, int total){
+bool write_data(char *filename, Diary *data, int total)
+{
     FILE *file;
 
     file = fopen(filename, "wb");
 
-    if(file == NULL) return false;
+    if (file == NULL)
+        return false;
 
-    if(fwrite(&total, sizeof(int), 1, file) != 1)
-    return false;
+    if (fwrite(&total, sizeof(int), 1, file) != 1)
+        return false;
 
     if (fwrite(data, sizeof(Diary), total, file) != total)
-    return false;
+        return false;
 
-    if (fclose(file) == EOF) return false;
+    if (fclose(file) == EOF)
+        return false;
 
     return true;
 }
 
-void printDiaries(struct Diary *note, int total){
+void printDiaries(struct Diary *note, int total)
+{
     printf("\nData read OK.\n\n");
-    for (int i = 0; i<total; i++){
-        printf("Diary %d\n", i+1);
+    for (int i = 0; i < total; i++)
+    {
+        printf("Diary %d\n", i + 1);
         printf("Date: %02d/%02d/%04d\n", note[i].day, note[i].month, note[i].year);
         printf("Text: %s\n", note[i].description);
         printf("Happiness: %d", note[i].happiness);
         printf("\n\n");
     }
 }
-    
-void printDiary(struct Diary *note, int index){
-        printf("Diary No.%d\n", index+1);
-        printf("Date: %02d/%02d/%04d %02d:%02d\n", note[index].day, note[index].month, note[index].year, note[index].hour, note[index].minute);
-        printf("Text: %s\n", note[index].description);
-        printf("Happiness: %d", note[index].happiness);
-        printf("\n");
+
+void printDiary(struct Diary *note, int index)
+{
+    printf("Diary No.%d\n", index + 1);
+    printf("Date: %02d/%02d/%04d %02d:%02d\n", note[index].day, note[index].month, note[index].year, note[index].hour, note[index].minute);
+    printf("Text: %s\n", note[index].description);
+    printf("Happiness: %d", note[index].happiness);
+    printf("\n");
 }
 
-int getIndexFromDate(int day, int month, int year){
-    return (year-2023)*365 + (month-1)*31 + day-1;
+int getIndexFromDate(int day, int month, int year)
+{
+    return (year - 2023) * 365 + (month - 1) * 31 + day - 1;
 }
 
-int getTotalYear(){
+int getTotalYear()
+{
     return total_year;
 }
 
 void delay(float number_of_seconds)
 {
     // Converting time into milli_seconds
-    int milli_seconds = 1000 * number_of_seconds;
- 
+    float milli_seconds = 1000 * number_of_seconds;
+
     // Storing start time
     clock_t start_time = clock();
- 
+
     // looping till required time is not achieved
-    while (clock() < start_time + milli_seconds);
+    while (clock() < start_time + milli_seconds)
+        ;
 }
 
-void loading(){
-    int progress = 1;
-    for(int i = 0; i < 30; ++i){
-        for(int j = 0; j < i; ++j){
-            
+void loading()
+{
+    char progressBar[33] = "[-----------------------------]";
+    system("cls");
+    for (int i = 1; i < 21; i++)
+    {
+        printf("Saving your data.\n\n");
+        if (i % 3 == 0)
+        {
+            printf("Loding...\n");
         }
+        else if (i % 2 == 0)
+        {
+            printf("Loding..\n");
+        }
+        else if (i % 1 == 0)
+        {
+            printf("Loding.\n");
+        }
+        progressBar[i] = '=';
+        printf("%s", progressBar);
+        delay(0.02);
+        system("cls");
     }
+    strcpy(progressBar, "[------------------------------]");
 }

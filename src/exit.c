@@ -9,6 +9,7 @@
 #include <windows.h>
 
 int exitPage(){
+    system("cls");
     printf("    _____\n");
     printf("   /    /|_ ___________________________________________\n");
     printf("  /    // /|                                          /|\n");

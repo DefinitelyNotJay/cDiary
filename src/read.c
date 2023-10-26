@@ -33,7 +33,6 @@ int read(Diary *allDiaries){
     scanf("%d/%d/%d", &day, &month, &year);
 
     int index = getIndexFromDate(day, month, year);
-
     if(!allDiaries[index].day == 0){
         printf("------------------------------------------------------\n");
         printDiary(allDiaries, index);
