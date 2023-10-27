@@ -24,30 +24,7 @@ int main(){
     time(&t);
     tm_info = localtime(&t);
 
-    // for(int i = 0; i < total; ++i){
-    //     printf("%d\n", i);
-    //     note[i].hour = 0;
-    //     note[i].minute = 0;
-    // }
-
-    //  if (write_data("note.bin", note, total))
-    //         printf("Write data OK.\n");
-    // else {
-    //     printf("Error writing to file.\n");
-    //     return 1;
-    // }
-    // free(note);
-
-
     int option;
-
-    /* instruction : 
-        1 create
-        2 read
-        3 edit
-        4 delete
-        5 exit
-    */
 
    printf("*** Main Menu ***\n");
     while(option != 4){
@@ -82,13 +59,6 @@ int main(){
 }
 
 void printASCII(){
-    // printf("   ____________________________________________________\n");
-    // printf("  |____________________________________________________|\n");
-    // printf("  | __     __   ____   ___ ||  ____    ____     _  __  |\n");
-    // printf("  ||  |__ |--|_| || |_|   |||_|**|*|__|+|+||___| ||  | |\n");
-    // printf("  ||==|^^||--| |=||=| |=*=||| |~~|~|  |=|=|| | |~||==| |\n");
-    // printf("  ||  |##||  | | || | |JRO|||-|  | |==|+|+||-|-|~||__| |\n");
-    // printf("  ||__|__||__|_|_||_|_|___|||_|__|_|__|_|_||_|_|_||__|_|\n");
     printf("  ______________________________________________________\n");
     printf("  | _____________________  ||      __   __  _  __    _ |\n");
     printf("  ||=|=|=|=|=|=|=|=|=|=|=| __..\\/ |  |_|  ||#||==|  / /|\n");
@@ -113,8 +83,3 @@ void printASCII(){
     printf("  |___ /   (|________/   |\\_______\\       /  /| |______|\n");
     printf("      /                  \\|________)     /  / | |\n\n");
 }
-
-
-
-
-

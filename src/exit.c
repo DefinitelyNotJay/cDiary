@@ -1,11 +1,6 @@
 #include <stdio.h>
-#include <stdlib.h>
-#include <stdbool.h>
-#include <string.h>
 #include "diary.h"
 #include "fileHandler.h"
-#include "inputHandler.h"
-#include <time.h>
 #include <windows.h>
 
 int exitPage(){
@@ -28,7 +23,5 @@ int exitPage(){
     delay(1);
     printf("%d\n", 1);
     delay(1);
-    // printf("%s", "See you space cowboy");
-    // delay(1);
     return 0;
 }
