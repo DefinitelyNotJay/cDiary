@@ -10,3 +10,5 @@ int getIndexFromDate(int day, int month, int year);
 int getTotalYear();
 void delay(float);
 void loading();
+char * getTodayDate(int day);
+char *getTodayMonth(int month);

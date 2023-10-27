@@ -18,7 +18,6 @@ int edit(Diary *file_data){
     bool continueEditing = true;
     int selection;
     int createFromNull,userInput;
-    // insert cool ASCII pic
     while(continueEditing){
         system("cls");
         printf("*** Edit ***\n\n");

@@ -8,6 +8,8 @@
 #include <time.h>
 #include <windows.h>
 
+void printASCIIWrite(void);
+
 int create(Diary *file_data)
 {
     time_t t;
@@ -21,6 +23,7 @@ int create(Diary *file_data)
     system("cls");
 
     printf("*** Write ***\n");
+    printASCIIWrite();
     printf("Write today content? (y/n) : ");
     getchar();
     gets(userWriteToday);
@@ -82,4 +85,15 @@ int create(Diary *file_data)
     return 0;
 }
 
+void printASCIIWrite(){
+    printf("  __\n");
+    printf(" (`/\\ \n");
+    printf(" `=\\/\\ __...--~~~~~-._   _.-~~~~~--...__ \n");
+    printf("  `=\\/\\               \\ /               \\ \n");
+    printf("   `=\\/                V                 \\ \n");
+    printf("   //_\\___--~~~~~~-._  |  _.-~~~~~~--...__\\ \n");
+    printf("  //  ) (..----~~~~._\\ | /_.~~~~----.....__\\ \n");
+    printf(" ===( INK )==========\\\\|//==================== \n");
+    printf("     \\___/           `---`\n\n");
+}
 

@@ -8,12 +8,13 @@
 #include <time.h>
 #include <windows.h>
 
+void printASCIIWrite(void);
 
 int createFromRead(Diary *file_data, int day, int month, int year){
     system("cls");
 
     printf("*** Write ***\n");
-
+    printASCIIWrite();
     char content[1000];
     int index = getIndexFromDate(day, month, year);
     int happiness_rate;
