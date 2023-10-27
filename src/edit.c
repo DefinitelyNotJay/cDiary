@@ -63,7 +63,7 @@ int edit(Diary *file_data){
             printf("------------------------------------------------------\n");
             printDiary(file_data, index);
             printf("------------------------------------------------------\n");
-            printf("content : ");
+            printf("Content : ");
             getchar();
             gets(content);
             printf("\nHappiness rate must be 1-10\n");
