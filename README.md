@@ -22,7 +22,7 @@ https://docs.google.com/document/u/1/d/1f0jAZXi0sk6RSfwoY4FTZvj4r5QR3YMGrQ3TnHzh
 https://gist.github.com/jamiew/40c66061b666272462c17f65addb14d5 | divider ASCII art
  
  
-### POSTER & VIDEO TUTORIALS
+### POSTER
 https://media.discordapp.net/attachments/731501411283763290/1167740883718901790/DIARY.png?ex=654f3a72&is=653cc572&hm=eab2c4e4df8fd0bbd1bd0ba9dd1d12a158966ab1ec610e57e2a6ff0946d0a673&=&width=467&height=676
 
 ### VIDEO 
