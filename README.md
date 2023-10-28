@@ -24,3 +24,6 @@ https://gist.github.com/jamiew/40c66061b666272462c17f65addb14d5 | divider ASCII 
  
 ### POSTER & VIDEO TUTORIALS
 https://media.discordapp.net/attachments/731501411283763290/1167740883718901790/DIARY.png?ex=654f3a72&is=653cc572&hm=eab2c4e4df8fd0bbd1bd0ba9dd1d12a158966ab1ec610e57e2a6ff0946d0a673&=&width=467&height=676
+
+### VIDEO 
+https://www.youtube.com/watch?si=Dj8M4ivR5Ul05coB&fbclid=IwAR2eNVWKdsp5JJhM8YP2SAt5-26K4r2Jqq9Ac-EvW8NEk5Txl9X7sg4WgVg&v=B-IRxgOORhQ&feature=youtu.be
